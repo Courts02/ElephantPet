@@ -1,7 +1,7 @@
 let currentPet = 'elephant';
 
     const blinkFrames = {
-      elephant: { open: "images/elephant_eyes_open.png", closed: "images/elephant_eyes_closed.png" },
+      elephant: { open: "elephant_eyes_open.png", closed: "elephant_eyes_closed.png" },
     };
 
     function blink() {
@@ -56,7 +56,7 @@ let currentPet = 'elephant';
     function putPetToSleep() {
       const petImg = document.getElementById("petImg");
       showAction("😴 Zzz...");
-      petImg.src = `images/${currentPet}sleeping.png`;
+      petImg.src = `${currentPet}sleeping.png`;
       setTimeout(() => {
         petImg.src = blinkFrames[currentPet].open;
       }, 3000);

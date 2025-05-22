@@ -5,7 +5,7 @@
   }
 
   body {
-    background-image: url('images/bg_outdoors.jpeg');
+    background-image: url('bg_outdoors.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,14 +55,14 @@
   }
 
   .pet {
-    width: 120px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 0;
+}
 
   .pet img {
     max-width: 100%;
