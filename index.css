@@ -55,21 +55,20 @@
   }
 
   .pet {
-  width: 120px;
-  height: 120px;
+  position: relative; /* so accessories stick */
+  width: 30vw;
+  max-width: 150px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
-  .pet img {
-    max-width: 100%;
-    max-height: 100%;
-    image-rendering: pixelated;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
-  }
+.pet img {
+  width: 100%;
+  height: auto;
+}
 
   .customization {
     background: rgba(255, 255, 255, 0.6);
@@ -83,24 +82,36 @@
     align-items: center;
   }
 
-  .accessories-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
+.center-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
 
-  .accessory-options, .care-buttons {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+.care-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+select {
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
 
   .accessories {
     position: absolute;
@@ -110,20 +121,10 @@
   }
 
   .accessory {
-    position: absolute;
-    width: 80px;
-    transition: opacity 0.3s ease;
-  }
-
-  #hat { top: 190px; left: -120px; }
-  #glasses { top: 255px; left: -125px; }
-  #pinkbow { top: 210px; left: -90px; }
-  #purplebow { top: 215px; left: -100px; }
-
-  .hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
+  position: absolute;
+  width: 40px;
+  transition: opacity 0.3s ease;
+}
 
   footer {
     color: #fff;
@@ -136,3 +137,16 @@
     0% { opacity: 1; transform: translateY(0); }
     100% { opacity: 0; transform: translateY(-20px); }
   }
+
+  .bg-select {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
